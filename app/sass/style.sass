@@ -1,0 +1,216 @@
+$font: 'Poiret One', cursive
+$logoFont: 'Marck Script', cursive
+
+*
+    padding: 0
+    margin: 0
+    border: 0
+
+body
+    font-family: $font
+    min-width: 100%
+    overflow-x: hidden
+
+
+// Header start.
+.header 
+    display: flex
+    width: 100vw
+    height: 70px
+    background-color: #010101
+    color: #ffffff
+    justify-content: space-between
+    align-items: center
+    @media screen and (max-width: 500px)
+        justify-content: space-around
+
+    .headerLogo
+        margin-left: 50px
+        display: flex
+        flex-direction: column
+        @media screen and (max-width: 500px)
+            margin-left: 0px
+        h1
+            align-self: center
+            font-family: $logoFont
+            font-size: 1.5rem
+        p
+            font-size: 1.1rem
+        
+
+    .headerMenu
+        display: flex
+        justify-content: flex-end
+        margin-right: 50px
+        @media screen and (max-width: 500px)
+            display: none
+
+        .headerContact
+            display: flex
+            
+        a
+            align-self: center
+            text-decoration: none
+            color: #ffffff
+            font-size: 2rem
+            font-family: $font
+            
+// Header end.
+
+// Gallery start
+
+.gallery
+    display: flex
+    width: 100vw
+    height: 90vh
+    background-color: #000000
+    overflow: hidden
+    .galleryContent
+        position: relative
+        width: 100vw
+        background-image: url(../img/2.jpg)
+        .leftDescriptionBlock
+            display: flex
+            font-family: $logoFont
+            padding-top: 100px
+            padding-left: 100px
+            flex-direction: column
+            color: #ffffff
+            line-height: 2.5rem
+            font-size: 1.4rem
+        .gallery-form
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            width: 400px
+            background-color: #010101
+            height: 500px
+            position: absolute
+            top: 50px
+            right: 50px
+            opacity: 0.7
+            border-radius: 3px
+            h2
+                font-size: 2rem
+                color: #ffffff
+                padding-top: 50px
+            @media screen and (max-width: 768px)
+                display: none
+
+            .user-form
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                align-items: center
+                margin-top: 50px
+                width: 100%
+                padding: 15px
+                %user-template
+                    color: #000000
+                    // position: absolute
+                    // margin: 0 auto
+                    // right: 0
+                    // left: 0
+                    line-height: 2rem
+                    font-size: 2rem
+                    text-align: center
+                    width: 85%
+                .user-name
+                    @extend %user-template
+                    margin-top: 20px
+                .user-email
+                    @extend %user-template
+                    margin-top: 20px
+                .submit
+                    color: #ffffff
+                    margin-top: 20px
+                    cursor: pointer
+                    font-size: 1.5rem
+                    padding: 5px 15px
+                    background-color: #CA1217
+                    border-radius: 3px
+                
+
+        .gallery-btn
+            margin: auto
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 50px
+            width: 100px
+            height: 50px
+
+            a
+                color: #ffffff
+                font-size: 1.5rem
+
+        .owl-dots
+            position: absolute
+            top: 10px
+            left: 25%
+            right: 25%
+
+// Gallery end
+
+// Browser start
+
+.wrapper
+    display: flex
+    flex-direction: column
+    padding: 20px 10px
+    .container
+        display: flex
+        width: 100%
+        .owl-nav .owl-prev,
+        .owl-nav .owl-next 
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translate(0,-50%);
+            font-size: 3rem
+            &:hover
+                background: rgba(255, 255, 255, 0)
+                color: #000000
+
+        .owl-nav .owl-next
+            left: auto
+            right: 0
+        .box
+            display: flex
+            flex-direction: column
+            padding-top: 30px
+            padding-bottom: 30px
+            padding-left: 20px
+            padding-right: 20px
+            text-align: center
+            background-color: #f2f2f2
+            border-radius: 3px
+            .gallery-item
+                background: url('/img/furs/1.jpg')
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center
+                height: 300px
+    .btn
+        display: flex
+        margin-top: 30px
+        text-align: center
+        font-size: 1.5rem
+        align-items: center
+        a
+            color: #ffffff
+            text-decoration: none
+            background-color: #CA1217
+            padding: 5px 10px
+            display: block
+            width: 100px
+            border-radius: 3px
+    .test
+        height: 50px
+        width: 100vw
+        background-color: green
+
+
+
+
